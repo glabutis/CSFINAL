@@ -1,0 +1,42 @@
+*{
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body{
+  background-color:#5B5B5B;
+  color: #FFFFFF;
+  text-align: center;
+  padding-top: 10px;
+  font-family: 'Share Tech Mono', monospace;
+}
+
+.heading{
+  padding: 20px;
+  border: 7px solid #2AD0B8;
+  border-radius: 50%;
+  display: inline-block;
+  color: #FFFFFF;
+  font-size: 40px;
+}
+
+
+
+td{
+
+  transition: all 0.3s ease;
+
+}
+
+td:hover{
+  color:#2AD0B8;
+  cursor: pointer;
+}
+
+
+
+a{
+  text-decoration: none;
+  color: #ffffff;
+}
