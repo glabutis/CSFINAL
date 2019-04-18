@@ -10,18 +10,24 @@ headers = {
     }
 
 pageResponse = requests.get(webPage, headers=headers, timeout=5)
-
 pageContent = BeautifulSoup(pageResponse.content, "html.parser")
-csvFile = open('info.csv', mode='w+',newline='')
-csvFile = csv.writer(csvFile, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+
+file = open("data.txt", "w")
+
+
 
 textContent = []
-for i in range(0, 5 * 3):
-	paragraphs = pageContent.find_all("td")[i].text
-	textContent.append(paragraphs)
+
+div = pageContent.find("div", {"class":"everydaym"})
+eventsHTML = div.find_all("a")
+
+for event in eventsHTML:
+    textContent.append(event.text)
 
 for item in textContent:
-    csvFile.writerow([item])
-    print([item])
+    file.write(str(item) + "\n")
+    print(item)
 
+
+file.close()
 print("Done")

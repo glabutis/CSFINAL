@@ -23,13 +23,15 @@ body{
 
 
 
-td{
+p{
 
+  padding: 10px;
   transition: all 0.3s ease;
+
 
 }
 
-td:hover{
+p:hover{
   color:#2AD0B8;
   cursor: pointer;
 }
@@ -39,4 +41,8 @@ td:hover{
 a{
   text-decoration: none;
   color: #ffffff;
+}
+
+.JSData{
+    padding-top: 10px;
 }
