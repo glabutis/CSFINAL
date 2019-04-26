@@ -3,7 +3,7 @@ function arrayToTable(tableData) { ////python -m http.server 8888
        $(tableData).each(function (i, rowData) {
            var row = $('<div></div>');
            $(rowData).each(function (j, cellData) {
-               row.append($('<p>'+cellData+'</p>'));
+               row.append($('<p class="data">'+cellData+'</p>'));
            });
            table.append(row);
        });
@@ -12,7 +12,7 @@ function arrayToTable(tableData) { ////python -m http.server 8888
 
    $.ajax({
        type: "GET",
-       url: "http://192.168.1.23:3000/data.txt",
+       url: "http://127.0.0.1:8000/data.txt",
        success: function (data) {
            $('body').append(arrayToTable(Papa.parse(data).data));
        }

@@ -1,7 +1,6 @@
 from bs4 import BeautifulSoup
 import requests
-from tkinter import *
-import csv
+
 
 webPage = 'https://attheworks.org/calendar-events/'
 
